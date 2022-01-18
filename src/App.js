@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 // import './App.css';
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import './App.css';
 
@@ -59,16 +59,18 @@ class App extends React.Component {
             <h1> Pleses wait some time.... </h1> </div> ;
    
         return (
-        <div className = "App">
-            <h1> Fetch data from an api in react </h1>  {
+        <div className = "App1">
+            <h1> Fetch data from an api in react </h1> <ul>  {
                 items.map((item) => ( 
-                <ol key = { item.id } >
-                    User_Name: { item.username }, 
-                    Full_Name: { item.name }, 
-                    User_Email: { item.email } 
-                    </ol>
+                   
+                        <li key = { item.id } >
+                            User_Name: { item.username }, 
+                            Full_Name: { item.name }, 
+                            User_Email: { item.email } 
+                        </li>
+                   
                 ))
-            }
+            } </ul>
         </div>
     );
 }
